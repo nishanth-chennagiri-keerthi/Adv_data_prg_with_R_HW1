@@ -58,7 +58,7 @@ To clearly demonstrate **Simpson’s Paradox**, we now visualize the admission p
 #| fig-align: center
 
 library(ggplot2)
-
+#This ggplot code creates a graph which shows a stacked bar chart of Admission counts by Department and Gender
 ggplot(ucb_df, aes(x = Gender, y = Freq, fill = Admit)) +
   geom_bar(stat = "identity", position = "stack") +
   facet_wrap(~ Dept, scales = "free_y") +
